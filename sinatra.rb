@@ -38,6 +38,18 @@ class MyApp < Sinatra::Base
     end
 
 
+    get '/new' do
+      @customer = Customer.new(name:'', surname: '', age: nil, code: nil, id: nil)
+      erb:new
+    end
+
+    post '/new' do
+      @customer = Customer.new(name: params[:name], surname: params[:surname], age: params[:age],
+                                code: params[:code], id: nil)
+      @customer.create
+      erb :show_customer
+    end
+    
   def pg  
    $pg
   end
