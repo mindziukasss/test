@@ -1,0 +1,28 @@
+<table class="table table-responsive ">
+ <thead>
+   <th>Parameter</th>
+   <th>Customer</th> 
+   <br>
+  </thead>
+  <tbody>   
+   <tr>
+     <td>ID</td>
+     <td><%= @customer.id %></td>
+   </tr>
+   <tr>
+     <td>Full name</td>
+     <td><%= @customer.full_name %></td>
+   </tr>
+   <tr>
+     <td>Asmens kodas</td>
+     <td><%= @customer.code %></td>
+   </tr>
+   <tr>
+     <td>Amzius</td>
+     <td><%= @customer.age %></td>   
+    </tr> 
+ 	</tbody>
+</table>
+<div class="text-center">
+	<a href="/customers/<%= @customer.id %>/edit"    class="btn btn-primary" >Edit</a>
+</div>
